@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+h1 {
+	font-family: serif;
+	color: red;
+}
+p {
+	color: black;
+	font-family: sans-serif;
+}
+table {
+	border: thin;
+	border-color: blue;
+	table-layout: auto;
+	border-width: medium;
+}
+
+thead {
+	background-color: #0099FF;
+	text-align: left;
+}
+
+tbody {
+	background-color: #99ccff;
+}
+
+td {
+	text-align: left;
+}
