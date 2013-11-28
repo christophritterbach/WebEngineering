@@ -1,4 +1,21 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
+
+#kopf {
+   position: absolute;
+   top: 0px;
+}
+
+#inhalt {
+   position: fixed;
+   top: 120px;
+   bottom: 50px;
+   overflow: scroll;
+}
+
+#fuss {
+   position: absolute;
+   bottom: 0px;
+}
 
 h1 {
 	font-family: serif;
@@ -15,15 +32,38 @@ table {
 	border-width: medium;
 }
 
+thead th {
+}
+
 thead {
-	background-color: #0099FF;
+	background-color: FloralWhite;
 	text-align: left;
 }
 
 tbody {
-	background-color: #99ccff;
+	background-color: HoneyDew;
+   overflow: scroll;
+}
+
+tbody td {
 }
 
 td {
 	text-align: left;
+}
+
+td > span.attribute  {
+   color:Indigo;
+}
+
+td > span.elemente  {
+   color:Indigo;
+}
+
+td.inline {
+   color: blue;
+}
+
+td.block {
+   color: darkblue;
 }
