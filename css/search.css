@@ -1,0 +1,68 @@
+﻿@charset "UTF-8";
+
+form {
+	width: 400px;
+}
+
+
+h1 {
+	font-family: serif;
+	color: red;
+}
+p {
+	color: black;
+	font-family: sans-serif;
+}
+
+.left {
+	float: left;
+	text-align: right;
+	margin-right: 2%;
+	top: 10px;
+}
+
+.right {
+	float: right;
+	text-align: left;
+	padding-left: 20px; 
+	margin-left: 42%;
+	margin-top: 2px;
+}
+
+.button_left {
+	padding: 4px 4px 4px 4px;
+	margin-top: 4px;
+	margin-left: 50px;
+	left: 50px ;
+	top: 10px;
+	font-size: 14px;
+}
+
+.button_right {
+	padding: 4px 4px 4px 4px;
+	margin-top: 4px;
+	top: 10px;
+	font-size: 14px;
+}
+
+input[type="text"], textarea {
+	margin-left: 5px;
+	background: #ddd;	
+}
+
+input[type="text"]:focus, textarea:focus {
+	color:#000;
+	background: #fff;
+	border: 2px solid red;
+}
+
+input[type="submit"]:focus {
+	color:#000;
+	background: #fff;
+	border: 2px solid red;
+}
+
+label, select, input[type="submit"] {
+	cursor: pointer;
+	
+}
