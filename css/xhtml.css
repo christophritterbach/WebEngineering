@@ -19,15 +19,15 @@
 
 h1 {
 	font-family: serif;
-	color: red;
+	color: #FF0000;
 }
 p {
-	color: black;
+	color: #000000;
 	font-family: sans-serif;
 }
 table {
 	border: thin;
-	border-color: blue;
+	border-color: #0000FF;
 	table-layout: auto;
 	border-width: medium;
 }
@@ -36,12 +36,12 @@ thead th {
 }
 
 thead {
-	background-color: FloralWhite;
+	background-color: #FFFAF0;
 	text-align: left;
 }
 
 tbody {
-	background-color: HoneyDew;
+	background-color: #F0FFF0;
    overflow: scroll;
 }
 
@@ -53,17 +53,17 @@ td {
 }
 
 td > span.attribute  {
-   color:Indigo;
+   color: #4B0082;
 }
 
 td > span.elemente  {
-   color:Indigo;
+   color:#4B0082;
 }
 
 td.inline {
-   color: blue;
+   color: #0000FF;
 }
 
 td.block {
-   color: darkblue;
+   color: #00008B;
 }
