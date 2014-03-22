@@ -1,0 +1,40 @@
+{
+    "total": 7,
+    "contacts": [
+        {
+            "vorname": "Berny",
+            "name": "Beahan",
+            "wohnort": "Redwood City"
+        },
+        {
+            "vorname": "Henderson",
+            "name": "Auer",
+            "wohnort": "Palo Alto"
+        },
+        {
+            "vorname": "Hector",
+            "name": "Will",
+            "wohnort": "Foster City"
+        },
+        {
+            "vorname": "Chelsea",
+            "name": "Grand",
+            "wohnort": "Redwood City"
+        },
+        {
+            "vorname": "Onie",
+            "name": "Feest",
+            "wohnort": "Palo Alto"
+        },
+        {
+            "vorname": "Celia",
+            "name": "Golf",
+            "wohnort": "Palo Alto"
+        },
+        {
+            "vorname": "Tierra",
+            "name": "Bell",
+            "wohnort": "Palo Alto"
+        }
+    ]
+}
