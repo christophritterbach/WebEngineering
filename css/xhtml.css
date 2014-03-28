@@ -1,0 +1,69 @@
+﻿@charset "UTF-8";
+
+#kopf {
+   position: absolute;
+   top: 0px;
+}
+
+#inhalt {
+   position: fixed;
+   top: 120px;
+   bottom: 50px;
+   overflow: scroll;
+}
+
+#fuss {
+   position: absolute;
+   bottom: 0px;
+}
+
+h1 {
+	font-family: serif;
+	color: #FF0000;
+}
+p {
+	color: #000000;
+	font-family: sans-serif;
+}
+table {
+	border: thin;
+	border-color: #0000FF;
+	table-layout: auto;
+	border-width: medium;
+}
+
+thead th {
+}
+
+thead {
+	background-color: #FFFAF0;
+	text-align: left;
+}
+
+tbody {
+	background-color: #F0FFF0;
+   overflow: scroll;
+}
+
+tbody td {
+}
+
+td {
+	text-align: left;
+}
+
+td > span.attribute  {
+   color: #4B0082;
+}
+
+td > span.elemente  {
+   color:#4B0082;
+}
+
+td.inline {
+   color: #0000FF;
+}
+
+td.block {
+   color: #00008B;
+}
