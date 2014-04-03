@@ -1,8 +1,8 @@
 Ext.application({
     name: 'Homework_4',
-    models: ['AddressModel'],
-    stores: ['AddressStore'],
-    views: ['MyEdit', 'MyCarousel', 'MyList'],
+    models: ['AddressModel', 'ArsnovaModel'],
+    stores: ['AddressStore', 'ArsnovaStore'],
+    views: ['MyEdit', 'MyCarousel', 'MyList', 'Examen'],
     controllers: ['MyController'],
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -29,6 +29,10 @@ Ext.application({
             tabBarPosition: 'bottom',
             styleHtmlContent: true,
             items: [{
+                title: 'Examen',
+                iconCls: 'user',
+            	xtype: 'chrisExamen',
+            }, {
             	xtype: 'chrisEdit',
             }, {
                 title: 'Profile',
@@ -43,3 +47,5 @@ Ext.application({
     } //launch
 
 });
+
+Ext.Loader.setConfig({ disableCaching: false });
