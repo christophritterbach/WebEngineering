@@ -12,8 +12,8 @@
 
 Ext.application({
     name: 'ArsnovaStatistics',
-    models: [ 'ArsnovaModel' ],
-    stores: [ 'ArsnovaStore' ],
+    models: [ 'ArsnovaModel', 'NobelpriceModel' ],
+    stores: [ 'ArsnovaStore', 'NobelpriceStore' ],
     views: [ 'ArsnovaView' ],
     
     icon: {
@@ -36,9 +36,22 @@ Ext.application({
 
     launch: function () {
 
-        var view = Ext.create('ArsnovaStatistics.view.ArsnovaView', {});
+        //var view = Ext.create('ArsnovaStatistics.view.ArsnovaView', {});
 
-        Ext.create('ArsnovaStatistics.store.ArsnovaStore', {
+        /*Ext.create('ArsnovaStatistics.store.ArsnovaStore', {
+            autoLoad: true,
+            listeners: {
+                load: function (self, records) {
+                  console.log(self.getCount());
+                    view.setData(records[0].getData());
+                }
+            }
+        });*/
+    	Ext.Ajax.useDefaultXhrHeader = false;
+    	Ext.Ajax.cors = true;
+
+    	var view = Ext.create('ArsnovaStatistics.view.NobelpriceView', {});
+        Ext.create('ArsnovaStatistics.store.NobelpriceStore', {
             autoLoad: true,
             listeners: {
                 load: function (self, records) {
@@ -47,6 +60,7 @@ Ext.application({
                 }
             }
         });
+
     }
 });
 
