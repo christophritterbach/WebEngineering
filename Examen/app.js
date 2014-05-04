@@ -12,9 +12,9 @@
 
 Ext.application({
     name: 'ArsnovaStatistics',
-    models: [ 'ArsnovaModel', 'NobelpriceModel' ],
-    stores: [ 'ArsnovaStore', 'NobelpriceStore' ],
-    views: [ 'ArsnovaView' ],
+    models: [ 'ArsnovaModel', 'NobelpriceModel', 'GreetingModel' ],
+    stores: [ 'ArsnovaStore', 'NobelpriceStore', 'GreetingStore' ],
+    views: [ 'ArsnovaView', 'GreetingView', 'AccountView' ],
     
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -26,7 +26,7 @@ Ext.application({
     isIconPrecomposed: true,
 
     startupImage: {
-        '320x460': 'resources/startup/320x460.jpg',
+        '320x460': 'resources/startup/3Account20x460.jpg',
         '640x920': 'resources/startup/640x920.png',
         '768x1004': 'resources/startup/768x1004.png',
         '748x1024': 'resources/startup/748x1024.png',
@@ -35,7 +35,6 @@ Ext.application({
     },
 
     launch: function () {
-
         //var view = Ext.create('ArsnovaStatistics.view.ArsnovaView', {});
 
         /*Ext.create('ArsnovaStatistics.store.ArsnovaStore', {
@@ -47,19 +46,41 @@ Ext.application({
                 }
             }
         });*/
-    	Ext.Ajax.useDefaultXhrHeader = false;
-    	Ext.Ajax.cors = true;
-
-    	var view = Ext.create('ArsnovaStatistics.view.NobelpriceView', {});
-        Ext.create('ArsnovaStatistics.store.NobelpriceStore', {
-            autoLoad: true,
+    	//Ext.Ajax.useDefaultXhrHeader = false;
+    	//Ext.Ajax.cors = true;
+    	console.log("Launch called");
+	    Ext.create('ArsnovaStatistics.store.GreetingStore', {
+	        autoLoad: true,
             listeners: {
                 load: function (self, records) {
-                  console.log(self.getCount());
-                    view.setData(records[0].getData());
+                    console.log(records[0].count());
                 }
-            }
-        });
+            }	    
+	    });
+	    Ext.create('ArsnovaStatistics.store.NobelpriceStore', {
+	        autoLoad: true,
+            listeners: {
+                load: function (self, records) {
+                    //console.log(records[0].count());
+                }
+            }	    
+	    });
+	    console.log("Store created");
+	    Ext.create('Ext.TabPanel', {
+            fullscreen: true,
+            tabBarPosition: 'bottom',
+            styleHtmlContent: true,
+            items: [ {
+                title: 'Info',
+            	xtype: 'Account',
+                iconCls: 'user',
+            },
+            {
+                title: 'Greeting',
+            	xtype: 'Greeting',
+                iconCls: 'home',
+            }], // items
+        }); // create()
 
     }
 });

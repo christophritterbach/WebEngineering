@@ -24,7 +24,7 @@ $myApp->get('/nobelprice', function () use ($myApp) {
    if (strlen($category) > 0) {
       $message = $message . "&category=" . $category;
    }
-   $message = $message . " HTTP/1.1\r\nHost: api.nobeprice.org\r\n\r\n";
+   $message = $message . " HTTP/1.1\r\nHost: api.nobelprize.org\r\n\r\n";
    //Send the message to the server
    if( ! socket_send ( $sock , $message , strlen($message) , 0)) {
       $errorcode = socket_last_error();
@@ -43,7 +43,11 @@ $myApp->get('/nobelprice', function () use ($myApp) {
    echo substr($buf, $i+4);
 });
 $myApp->options('/nobelprice', function () use ($myApp) {
-   $myApp->response()->header('Allow', 'GET');
+   $myApp->response()->header('Allow', 'GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH');
+   $myApp->response()->header('Access-Control-Allow-Headers', 'Content-Type,x-requested-with,Authorization');
+   $myApp->response()->header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT');
+   $myApp->response()->header('Access-Control-Allow-Origin', '*');
+   $myApp->response()->header('Access-Control-Max-Age', '360');
 });
 $myApp->run();
 ?>
